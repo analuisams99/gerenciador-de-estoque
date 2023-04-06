@@ -6,9 +6,9 @@ services:
     ports:
       - 8888:8080
     depends_on:
-      - mongodb
+      - mongo_db
 
-  mongodb:
+  mongo_db:
     image: mongo:5.0.15
     ports:
       - 27017:27017
