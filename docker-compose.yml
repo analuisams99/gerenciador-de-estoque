@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  application:
+    build: .
+    restart: always
+    ports:
+      - 8888:8080
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:5.0.15
+    ports:
+      - 27017:27017
