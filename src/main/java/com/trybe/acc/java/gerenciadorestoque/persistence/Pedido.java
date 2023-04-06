@@ -4,12 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**Classe de entidade Pedido.*/
 @Document(collection = "pedido")
 public class Pedido {
 
-  /**
-   * Construtor para a entidade Pedido.
-   */
+  /**Construtor para a entidade Pedido.*/
   public Pedido(@JsonProperty("idDoPedido") String idDoPedido, @JsonProperty("nome") String produto,
       @JsonProperty("preco") Integer quantidade) {
     this.idDoPedido = idDoPedido;
@@ -45,6 +44,4 @@ public class Pedido {
   public void setQuantidade(Integer quantidade) {
     this.quantidade = quantidade;
   }
-
-
 }

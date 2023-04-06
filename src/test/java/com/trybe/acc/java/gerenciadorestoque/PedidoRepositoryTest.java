@@ -18,11 +18,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import java.util.List;
 import java.util.Optional;
 
-
-
 @Testcontainers
 @DataMongoTest(excludeAutoConfiguration = EmbeddedMongoAutoConfiguration.class)
 public class PedidoRepositoryTest {
+  
+  @Container
+  private static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:5.0.15");
 
   @Autowired
   private PedidoRepository pedidoRepository;

@@ -2,9 +2,9 @@ package com.trybe.acc.java.gerenciadorestoque.persistence;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.stereotype.Component;
 
+/**Classe PedidoDao.*/
 @Component
 public class PedidoDao {
 
@@ -29,7 +29,7 @@ public class PedidoDao {
 
   /**
    * Atualiza um Pedido, dado o seu Id.
-   * 
+   *
    * @param id o Id do pedido.
    * @param pedido o Pedido a ser atualizado.
    * @return o pedido atualizado.
